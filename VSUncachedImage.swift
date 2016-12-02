@@ -5,7 +5,7 @@
 //  Copyright © 2015 Vea Software. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol VSUncachedImage
 {
@@ -16,7 +16,7 @@ extension VSUncachedImage
 {
     func getUncachedImage(named name : String) -> UIImage?
     {
-        if let imgPath = NSBundle.mainBundle().pathForResource(name, ofType: nil)
+        if let imgPath = Bundle.main.path(forResource: name, ofType: nil)
         {
             return UIImage(contentsOfFile: imgPath)
         }
